@@ -21,8 +21,21 @@
 	</script>
 </head>
 <body>
-
-<%= yield %>
-
+  <header class="Header">
+    <div class="row">
+      <div class="small-6 columns"></div>
+      <div class="small-6 columns u-alignRight">
+          <nav>
+            <ul class="HeaderMenu">
+              <li class="HeaderMenu-item"><%= link_to "Inicio", root_path, class: "HeaderMenu-itemLink HeaderMenu--active" %></li>
+              <li class="HeaderMenu-item"><%= link_to "Eventos", events_path, class: "HeaderMenu-itemLink" %></li>
+              <li class="HeaderMenu-item"><%= link_to "Contacto", "/", class: "HeaderMenu-itemLink" %></li>
+            </ul>
+          </nav>
+      </div>
+    </div>
+  </header>
+  <%= yield %>
+  <script>$(document).foundation();</script>
 </body>
 </html>

@@ -14,3 +14,4 @@
 //= require jquery_ujs
 //= require_tree .
 //= require foundation.min
+//= stub active_admin
