@@ -1,9 +1,13 @@
 .Header {
   background: rgba(0,0,0,0.3);
   position: fixed;
-  height: 45px;
+  height: 4rem;
   width: 100%;
   top: 0;
+}
+
+.Header-logo {
+  margin-top: 0.8125rem;
 }
 
 .HeaderMenu {
@@ -30,8 +34,8 @@
   }
 
   .HeaderMenu-itemLink {
-    padding: 9px 0;
-    margin: 0 15px;
+    padding: 1.15rem 0;
+    margin: 0 0.9375rem;
     display: block;
     &.HeaderMenu--active {
       border-bottom: 3px solid #BD201F;

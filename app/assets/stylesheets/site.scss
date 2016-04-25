@@ -53,15 +53,17 @@
 // 	.Home-logoImg{max-width: 60%;}
 // }
 
-@media screen and (min-width: 40em) {
-  .HomeEvent {
-    margin: 2.5rem;
-  }
+.HomeEvent {
+  margin: 2.5rem 0;
+}
 
-  .HomeEvent-title {
-    color: #4A4A4A;
-    font-size: 3rem;
-    margin-top: 0;
-    line-height: 3.4rem;
-  }
+.HomeEvent-title {
+  color: #4A4A4A;
+  font-size: 3rem;
+  margin-top: 0;
+  line-height: 3.4rem;
+}
+
+@media screen and (min-width: 40em) {
+
 }
