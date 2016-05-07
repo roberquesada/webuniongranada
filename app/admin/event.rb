@@ -3,6 +3,7 @@ permit_params :title, :description, :slug, :type, :date
 before_filter only: [:edit, :destroy, :show, :update] do
   @event = Event.find_by_slug params[:id]
 end
+  permit_params :title, :description, :slug, :category, :date
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
