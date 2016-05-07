@@ -1,5 +1,5 @@
 ActiveAdmin.register Event do
-permit_params :title, :description, :slug, :type
+permit_params :title, :description, :slug, :type, :date
 before_filter only: [:edit, :destroy, :show, :update] do
   @event = Event.find_by_slug params[:id]
 end
