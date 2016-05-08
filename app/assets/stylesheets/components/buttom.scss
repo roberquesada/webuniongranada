@@ -1,0 +1,11 @@
+.Buttom {
+  display: inline-block;
+  text-decoration: none;
+  color: #BD201F;
+  border: 2px solid #7C7E7D;
+  padding: 5px 20px;
+  &:hover {
+    background: #7C7E7D;
+    color: #FFF;
+  }
+}

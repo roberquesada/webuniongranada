@@ -3,12 +3,29 @@
 		<div class="row">
 			<div class="medium-6 columns">
 				<h2 class="HomeEvent-title"><%= @last_event.title %></h2>
+				<p>con
+					<% @last_event_speakers.each_with_index do |speaker, index| %>
+						<% if @last_event_speakers.size == 1 %>
+							<%= speaker.name %>
+						<% else %>
+							<% if index == @last_event_speakers.size - 1 %>
+								<%= "& #{speaker.name}" %>
+							<% elsif index == @last_event_speakers.size - 2 %>
+								<%= "#{speaker.name} " %>
+							<% else %>
+								<%= "#{speaker.name}, " %>
+							<% end %>
+						<% end %>
+				  <% end %>
+				</p>
+				<p><%= @last_event.category.capitalize %></p>
+				<p><%= l(@last_event.date, format: :event) %></p>
 			</div>
 			<div class="medium-6 columns"></div>
 		</div>
 		<div class="row">
-			<div class="small-12 colmuns">
-				<%= link_to "Ver más", event_path(@last_event) %>
+			<div class="small-12 colmuns u-alignCenter">
+				<%= link_to "Ver más", event_path(@last_event), class: "Buttom" %>
 			</div>
 		</div>
 	</section>
