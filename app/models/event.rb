@@ -6,6 +6,7 @@ class Event < ActiveRecord::Base
 
   has_many :participations
   has_many :speakers, through: :participations
+  accepts_nested_attributes_for :participations
   def to_param
     slug
   end

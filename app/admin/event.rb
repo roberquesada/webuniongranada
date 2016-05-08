@@ -1,5 +1,5 @@
 ActiveAdmin.register Event do
-  permit_params :title, :description, :slug, :category, :date
+  permit_params :title, :description, :slug, :category, :date, participations_attributes: [:id, :speaker_id, :event_id]
   before_filter only: [:edit, :destroy, :show, :update] do
     @event = Event.find_by_slug params[:id]
   end
@@ -11,6 +11,12 @@ ActiveAdmin.register Event do
       f.input :slug
       f.input :category, as: :radio, collection: Event.categories.map { |k,v| [k.capitalize,k] }
       f.input :date
+    end
+
+    f.inputs "Speakers Details" do
+      f.has_many :participations do |s|
+        s.input :speaker
+      end
     end
     f.actions
   end
