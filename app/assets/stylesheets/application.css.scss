@@ -1,3 +1,9 @@
+@import "foundation.min";
+@import "variables";
+@import "utilities";
+@import "common";
+@import "header";
+@import "events";
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -11,6 +17,7 @@
  * file per style scope.
  *
  *= require foundation.min
+ *= require variables
  *= require_tree .
  *= require_self
  *= stub active_admin
