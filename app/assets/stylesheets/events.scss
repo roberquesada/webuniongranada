@@ -1,3 +1,15 @@
 // Place all the styles related to the events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.Event--red {
+  background: $main_color_red_dark;
+}
+
+.Event--grey {
+  background: $main-color-grey;
+}
+
+.Event-item {
+
+}

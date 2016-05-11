@@ -1,7 +1,17 @@
 <section>
+  <h1>Eventos</h1>
   <% @events.each do |event| %>
-    <article>
-      <h2><%= event.title %></h2>
+    <article class="expanded row">
+      <div class="<%= cycle('', 'medium-push-9', name: 'odd') %> medium-3 columns">
+        Foto
+      </div>
+      <div class="<%= cycle('', 'medium-pull-3', name: 'even') %> <%= cycle('Event--red', 'Event--grey', name: 'colors-odd') %> medium-9 columns">
+        <h2><%= event.title %></h2>
+        <%= event.description.html_safe %>
+        <div>
+          <%= link_to "Ver más", event_path(event) %>
+        </div>
+      </div>
     </article>
   <% end %>
 </section>
