@@ -1,17 +1,19 @@
 <section class="Event">
   <h1 class="Event-title">Eventos</h1>
-  <% @events.each do |event| %>
-    <article class="expanded row Event-item">
-      <div class="<%= cycle('', 'medium-push-8', name: 'odd') %> medium-4 columns Event-itemImage">
-        <%= image_tag "data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=", alt: "Image defult", data: { image: "event_default.jpg"} %>
-      </div>
-      <div class="<%= cycle('', 'medium-pull-4', name: 'even') %> <%= cycle('Event--red', 'Event--grey', name: 'colors-odd') %> medium-8 columns Event-itemText">
-        <h2><%= event.title %></h2>
-        <%= event.description.html_safe %>
-        <div>
-          <%= link_to "Ver más", event_path(event), class: "Buttom" %>
+  <div class="Event-itemsContainer">
+    <% @events.each do |event| %>
+      <article class="expanded row Event-item">
+        <div class="<%= cycle('', 'medium-push-8', name: 'odd') %> medium-4 columns Event-itemImage">
+          <%= image_tag "data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=", alt: "Image defult", data: { image: "event_default.jpg"} %>
         </div>
-      </div>
-    </article>
-  <% end %>
+        <div class="<%= cycle('', 'medium-pull-4', name: 'even') %> <%= cycle('Event--red', 'Event--grey', name: 'colors-odd') %> medium-8 columns Event-itemText">
+          <h2><%= event.title %></h2>
+          <%= event.description.html_safe %>
+          <div>
+            <%= link_to "Ver más", event_path(event), class: "Buttom" %>
+          </div>
+        </div>
+      </article>
+    <% end %>
+  </div>
 </section>

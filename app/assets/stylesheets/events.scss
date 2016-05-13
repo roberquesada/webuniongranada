@@ -15,9 +15,15 @@
 }
 
 .Event-itemImage {
+  background-image: url('data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=');
   background-size: cover;
   background-position: center center;
   height: 200px;
+  transition: background .4s linear;
+}
+
+.Event-itemsContainer {
+  background-color: #333;
 }
 
 @media screen and (min-width: 40em) {
