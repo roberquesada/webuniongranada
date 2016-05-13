@@ -10,6 +10,18 @@
   background: $main-color-grey;
 }
 
-.Event-item {
+.Event-itemText {
+  color: #FFF;
+}
 
+.Event-itemImage {
+  background-size: cover;
+  background-position: center center;
+  height: 200px;
+}
+
+@media screen and (min-width: 40em) {
+  .Event-itemImage {
+    height: 0;
+  }
 }

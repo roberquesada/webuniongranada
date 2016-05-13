@@ -10,8 +10,7 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+// stub active_admin
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
-//= require foundation.min
-//= stub active_admin
