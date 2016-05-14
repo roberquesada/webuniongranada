@@ -6,20 +6,7 @@
 
   function createEventImages(){
     $('.Event-item').each(function(){
-      if ($(window).width() > 639) {
-        imagesHeight($(this));
-      }
       generateImages($(this));
-    });
-  }
-
-  function resizeEventImage(){
-    $('.Event-item').each(function(){
-      if ($(window).width() < 640) {
-        imagesHeightReset($(this));
-      } else {
-        imagesHeight($(this));
-      }
     });
   }
 
@@ -28,11 +15,6 @@
     var itemHeight = item.find('.Event-itemText').height()
     var itemImage = item.find('.Event-itemImage')
     itemImage.css('height', itemHeight)
-  }
-
-  function imagesHeightReset(item) {
-    var itemImage = item.find('.Event-itemImage')
-    itemImage.css('height', 200)
   }
 
   function generateImages(item) {
@@ -48,7 +30,6 @@
   }
 
   // Events
-  $(window).on('load', init);
-  $(window).on('resize', resizeEventImage)
+  // $(window).on('load', init);
 
 })(jQuery);

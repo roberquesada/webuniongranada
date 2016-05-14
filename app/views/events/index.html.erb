@@ -2,11 +2,11 @@
   <h1 class="Event-title">Eventos</h1>
   <div class="Event-itemsContainer">
     <% @events.each do |event| %>
-      <article class="expanded row Event-item">
-        <div class="<%= cycle('', 'medium-push-8', name: 'odd') %> medium-4 columns Event-itemImage">
+      <article class="expanded row Event-item align-stretch">
+        <div class="<%= cycle('medium-order-1', 'medium-order-2', name: 'odd') %> medium-4 small-12 columns Event-itemImage" style="background-image: url('/images/event_default.jpg')">
           <%= image_tag "data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=", alt: "Image defult", data: { image: "event_default.jpg"} %>
         </div>
-        <div class="<%= cycle('', 'medium-pull-4', name: 'even') %> <%= cycle('Event--red', 'Event--grey', name: 'colors-odd') %> medium-8 columns Event-itemText">
+        <div class="<%= cycle('medium-order-2', 'medium-order-1', name: 'even') %> <%= cycle('Event--red', 'Event--grey', name: 'colors-odd') %> medium-8 small-12 columns Event-itemText">
           <h2><%= event.title %></h2>
           <%= event.description.html_safe %>
           <div>
