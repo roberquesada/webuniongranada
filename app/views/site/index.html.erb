@@ -1,57 +1,78 @@
 <% if @last_event %>
-	<section class="HomeEvent">
-		<div class="row">
-			<div class="medium-6 columns">
-				<h2 class="HomeEvent-title"><%= @last_event.title %></h2>
-				<p>con
-					<% @last_event_speakers.each_with_index do |speaker, index| %>
-						<% if @last_event_speakers.size == 1 %>
-							<%= speaker.name %>
-						<% else %>
-							<% if index == @last_event_speakers.size - 1 %>
-								<%= "& #{speaker.name}" %>
-							<% elsif index == @last_event_speakers.size - 2 %>
-								<%= "#{speaker.name} " %>
-							<% else %>
-								<%= "#{speaker.name}, " %>
-							<% end %>
-						<% end %>
-				  <% end %>
-				</p>
-				<p><%= @last_event.category.capitalize %></p>
-				<p><%= l(@last_event.date, format: :event) %></p>
-			</div>
-			<div class="medium-6 columns"></div>
-		</div>
-		<div class="row">
-			<div class="small-12 colmuns u-alignCenter">
-				<%= link_to "Ver más", event_path(@last_event), class: "Buttom" %>
-			</div>
-		</div>
-	</section>
+  <section class="HomeEvent">
+    <div class="row">
+      <div class="medium-6 columns">
+        <h2 class="HomeEvent-title"><%= @last_event.title %></h2>
+        <p>con
+          <% @last_event_speakers.each_with_index do |speaker, index| %>
+            <% if @last_event_speakers.size == 1 %>
+              <%= speaker.name %>
+            <% else %>
+              <% if index == @last_event_speakers.size - 1 %>
+                <%= "& #{speaker.name}" %>
+              <% elsif index == @last_event_speakers.size - 2 %>
+                <%= "#{speaker.name} " %>
+              <% else %>
+                <%= "#{speaker.name}, " %>
+              <% end %>
+            <% end %>
+          <% end %>
+        </p>
+        <p><%= @last_event.category.capitalize %></p>
+        <p><%= l(@last_event.date, format: :event) %></p>
+      </div>
+      <div class="medium-6 columns"></div>
+    </div>
+    <div class="row">
+      <div class="small-12 colmuns u-alignCenter">
+        <%= link_to "Ver más", event_path(@last_event), class: "Buttom" %>
+      </div>
+    </div>
+  </section>
 <% end %>
 
 <section class="HomeJoinUs">
-	<div class="row">
-		<article class="columns medium-6 small-12 HomeJoinUs-speaker">
-			<h2 class="HomeJoinUs-title">Comparte tu experience</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem saepe ipsum accusamus, atque sed vero dolorem, nam at omnis delectus tenetur maxime officia eos reprehenderit, sit laborum corrupti voluptates aliquid?</p>
-		</article>
-		<article class="columns medium-6 small-12 HomeJoinUs-member">
-			<h2 class="HomeJoinUs-title">Se parte de nuestra comunidad</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius nihil tenetur vero suscipit, aliquid quidem recusandae possimus laudantium ex. Tempore sequi suscipit, sapiente voluptates ducimus earum labore quis dolor. Totam.</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In quod neque eos debitis tempore assumenda fugiat, nesciunt placeat aspernatur exercitationem? Eaque eligendi enim aperiam consequatur maxime nisi odio, porro fugit.</p>
-		</article>
-	</div>
+  <div class="row">
+    <article class="columns medium-6 small-12 HomeJoinUs-item HomeJoinUs-speaker">
+      <h2 class="HomeJoinUs-itemTitle u-alignCenter">Comparte tu experience</h2>
+      <h3 class="HomeJoinUs-itemSubtitle u-alignCenter">¡Tienes mucho que decir!</h3>
+      <div class="row HomeJoinUs-content">
+        <div class="columns small-12">
+          <div class="HomeJoinUs-itemImageContainer">
+            <%= image_tag "ninja.svg", alt: "Se un ninja" %>
+          </div>
+          <div class="HomeJoinUs-itemTextContainer">
+            <p class="HomeJoinUs-itemText">¿Eres un “ninja” de la programación, diseño… y quieres dar una charla o taller con nosotros para dejarnos con la boca abierta?</p>
+          </div>
+        </div>
+      </div>
+      <%= link_to "¡Quiero que me escuchen!", '#', class: "Buttom Buttom--white Button--full-witdh" %>
+    </article>
+    <article class="columns medium-6 small-12 HomeJoinUs-item HomeJoinUs-member">
+      <h2 class="HomeJoinUs-itemTitle u-alignCenter">Se parte de nuestra comunidad</h2>
+      <h3 class="HomeJoinUs-itemSubtitle u-alignCenter">¡Aún cabemos más!</h3>
+      <div class="row HomeJoinUs-content">
+        <div class="columns small-12">
+          <div class="HomeJoinUs-itemTextContainer">
+            <p class="HomeJoinUs-itemText">En Web Union Granada  siempre celebramos la llegada de un nuevo miembro al equipo. Danos otra excusa para irnos de tapas</p>
+          </div>
+          <div class="HomeJoinUs-itemImageContainer">
+            <%= image_tag "fiesta.svg", alt: "Parte de nuestra comunidad" %>
+          </div>
+        </div>
+      </div>
+      <%= link_to "¡Vamos de tapas!", '#', class: "Buttom Buttom--white Button--full-witdh" %>
+    </article>
+  </div>
 </section>
 
 <section class="HomeTeam">
-	<div class="row">
-		<h2 class="HomeTeam-title column u-alignCenter">El equipo</h2>
-	</div>
-	<div class="row small-up-2 medium-up-3 large-up-5 align-center">
-	  <div class="column">1 per row on small</div>
-	  <div class="column">2 per row on medium</div>
-	  <div class="column">3 per row on large</div>
-	</div>
+  <div class="row">
+    <h2 class="HomeTeam-title column u-alignCenter">El equipo</h2>
+  </div>
+  <div class="row small-up-2 medium-up-3 large-up-5 align-center">
+    <div class="column">1 per row on small</div>
+    <div class="column">2 per row on medium</div>
+    <div class="column">3 per row on large</div>
+  </div>
 </section>

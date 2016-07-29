@@ -19,6 +19,41 @@
   color: #FFF;
 }
 
+.HomeJoinUs-item {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.HomeJoinUs-content {
+  margin-bottom: 2rem
+}
+
+.HomeJoinUs-itemTitle  {
+  margin: 0;
+}
+
+.HomeJoinUs-itemSubtitle  {
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.HomeJoinUs-itemImageContainer {
+  display: inline-block;
+  vertical-align: middle;
+  width: 85px;
+}
+
+.HomeJoinUs-itemTextContainer {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 10px;
+  width: calc(100% - 89px);
+}
+
+.HomeJoinUs-itemText {
+  margin: 0;
+}
+
 .HomeJoinUs-speaker {
   background: $main_color_red;
 }
