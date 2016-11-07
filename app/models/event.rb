@@ -1,3 +1,17 @@
+# == Schema Information
+#
+# Table name: events
+#
+#  id          :integer          not null, primary key
+#  title       :string           not null
+#  description :text             not null
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  slug        :string
+#  category    :integer
+#  date        :datetime
+#
+
 class Event < ActiveRecord::Base
   enum category: [:workshop, :charla]
 
